@@ -2,7 +2,7 @@
 %%%
 %%% Source: http://www.howtotex.com/
 %%% Feel free to distribute this template, but please keep to referal to http://www.howtotex.com/ here.
-%%% Date: February 2011
+%%% Date: August 2017
 
 %%% Preamble
 \documentclass[	DIV=calc,%
@@ -54,13 +54,8 @@
 \rhead{}
 % Footer (you may change this to your own needs)
 
-%% ====================================
-%% ====================================
-%% mude o rodape  do projeto
-%% ====================================
-%% ====================================
 
-\lfoot{\footnotesize \texttt{Cabeamento Estruturado} \textbullet ~Modelo de Projeto}
+\lfoot{\footnotesize \texttt{Cabeamento Estruturado} \textbullet ~Projeto São Borja}
 
 
 \cfoot{}
@@ -90,11 +85,6 @@
 				\fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont 
 				}
 
-%% ====================================
-%% ====================================
-%% mude o titulo  do projeto
-%% ====================================
-%% ====================================
 
 \title{Projeto de cabeamento estruturado Unidade}					% Title of your article goes here
 
@@ -110,7 +100,7 @@
 
 
 \postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} 
-					\\Universidade Tecnológica Federal do Paraná - Câmpus Foz do Iguaçu 								% Institution of author
+					\\Universidade Tecnológica Federal do Paraná - Campus Foz do Iguaçu 								% Institution of author
 					\par\end{flushleft}\HorRule}
 
 \date{}																				% No date
@@ -126,17 +116,7 @@
 % The first character should be within \initial{}
 
 
-
-
-%% ====================================
-%% ====================================
-%% mude o resumo  do projeto
-%% ====================================
-%% ====================================
-\initial{E}\textbf{ste modelo exemplifica como um projeto de cabeamento estruturado deve ser elaborado. No projeto real,
-	esta seção deve indicar qual seria o propósito do projeto: reestruturar, criar uma estrura sem uma anterior, apresentar uma estrutura ficticia ou real  etc. Deve também conter sua cobertura (quais elementos este projeto aborda): Levantamento da planta física, Elaboração da planta lógica, Equipamentos passivos da rede (memorial descritivo), Levantamento de quantidade/custo, Plano de Certificação e orçamento.
-	No caso de projetos reais, deve conter também o escopo. No projeto real deve conter quais as atividades serão executadas e quais os responsáveis. Deve apresentar também as restrições que serão cumpridas e um possível acordo de nível de serviço (SLA).
-	Este projeto tem por objetivo reestruturar um estrutura real onde o cabeamento e toda a infraestrutura de rede é muito precária. Será necessário instalar Racks, patch panels, switches, novos pontos lógicos. A planta física e lógica será apresenta.}
+\initial{E}\textbf{ste projeto tem por objetivo reestruturar um estrutura real onde o cabeamento e toda a infraestrutura de rede é muito precária. Será necessário instalar Racks, patch panels, switches, novos pontos lógicos. A planta física e lógica será apresentada.}
 
 %% ====================================
 \begin{figure}
@@ -147,46 +127,35 @@
 \vspace{3cm}
 \centerline{\textit{\textbf{\today}}}
 
-\clearpage
-    \renewcommand*\listfigurename{Lista de figuras}
-\listoffigures
+%%\clearpage
+  %%  \renewcommand*\listfigurename{Lista de figuras}
+%%\listoffigures
 
-\renewcommand*\listtablename{Lista de tabelas}
-\listoftables
-
-
-
+%%\renewcommand*\listtablename{Lista de tabelas}
+%%\listoftables
 
 \clearpage
 \renewcommand{\contentsname}{Sumário}
 \tableofcontents
 \clearpage
 
-%% ====================================
-%% ====================================
-%% Inicio do texto
-%% ====================================
-%% ====================================
 \section{Introdução}
-Iremos reestruturar a rede da Unidade de negócio(Recebimento de grãos) localizada na cidade de Júlio de Castilhos-RS da empresa C.Vale. Este local foi recentemente adquirido e possui vários problemas na rede. O objetivo é regularizar tudo o que esta fora do padrão para solucionar problemas recorrentes que os colaboradores possuem e que prejudicam muito o desempenho do seu trabalho. O local possui aproximadamente 20 colaboradores, cada colaborador utiliza um computador para trabalhar e existem 3 impressoras que são ligadas na rede. 
-Explique nesta primeira seção qual seria o perfil do caso. Perfil do cliente, quantidade de colaboradores, quantidade de equipamentos de TI atualmente.
+Iremos reestruturar a rede da Unidade de negócio(Recebimento de grãos) localizada na cidade de São Borja-RS da empresa C.Vale. Este local foi recentemente adquirido e possui vários problemas na rede. O objetivo é regularizar tudo o que esta fora do padrão para solucionar problemas recorrentes que os colaboradores possuem e que prejudicam muito o desempenho do seu trabalho. O local possui aproximadamente 20 colaboradores, cada colaborador utiliza um computador para trabalhar e existem 3 impressoras que são ligadas na rede. 
 
-Indique também nesta seção o escopo do projeto.
 
-Apresente um overview do parque tecnológico do caso.
 \subsection{Benefícios}
 \begin{itemize}
 	
-	\item A rede ficará estável, pois o rack será refeito, crimpando todos os pontos de rede novamente.
-	\item Serão instalados novos pontos lógicos para que cada dispositivo que é ligado na rede tenha seu próprio ponto, melhorando o desempenho da rede. 
-	\item Os pontos lógicos serão identificados, facilitando manutenções futuras ou mudança de ponto lógico para ponto de telefone no rack. 
-	\item Os outros prédios serão interligados com fibra óptica, aumentado a segurança e desempenho da rede.
+	\item A rede ficará estável, pois todo o cabeamento de rede será novo
+	\item Serão instalados pontos de rede novos para todos os dispositivos, os pontos de redes atuais serão desativados após a conclusão do projeto
+	\item Os pontos lógicos serão identificados, facilitando manutenções futuras ou mudança de ponto lógico para ponto de telefone no rack 
+	\item Os outros prédios serão interligados com fibra óptica, aumentado a segurança e desempenho da rede
 	\item Serão instalados Racks nos outros prédios, assim como pontos de rede.
 \end{itemize}
 
 \section{Estado atual}
 A rede atual possui vários problemas:
-o rack é pequeno e esta muito desorganizado, os patch cords não são certificados e possuem conectores com defeito, alguns pontos não estão crimpados no patch panel, não há identificação para os pontos lógicos, são utilizados pequenos switches em algumas estações de trabalho devido a falta de pontos de rede, a interligação do escritório com outros prédios(balança, guarita, armazém) é feita via rádio ou com cabo UTP, não existe rack e pontos de rede estruturados nos outros prédios.
+o rack é pequeno e esta muito desorganizado, os patch cords não são certificados e possuem conectores com defeito, alguns pontos não estão crimpados no patch panel, não há identificação para os pontos lógicos, são utilizados pequenos switches em algumas estações de trabalho devido a falta de pontos de rede, a interligação do escritório com outros prédios(moegas, guarita, armazém) é feita via rádio ou com cabo UTP, não existe rack e pontos de rede estruturados nos outros prédios.
 
 Segue alguns detalhes da rede atual:
 \begin{itemize}
@@ -197,32 +166,49 @@ Segue alguns detalhes da rede atual:
 
 \section{Usuários e Aplicativos}
 Atualmente todos os usuários utilizam computadores que estabelecem uma conexão RDP com um servidor da Sede da empresa. Todos os aplicativos necessários para o dia a dia de trabalho ficam nesse servidor, assim como o ERP. Impressoras são ligadas na rede e são instaladas nos servidores também. É provável que a quantidade de usuários aumente quando a empresa implantar o setor de acessório de peças na Unidade.
-
-Explique nesta seção os usuários atuais e o perfil de crescimento, se por exemplo, há estimativa na evolução da empresa no que tange a quantidade de usuários, pontos de redes, equipamentos.
  
 
 \subsection{Usuários}
 Os usuários atuais são divididos da seguinte forma: 1 gerente, 1 subgerente, 2 balanceiros, 3 financeiro, 4 agrônomos, 4 vendedores de insumos, 1 caixa, 1 zeladora, 1 classificador, 2 insumistas.
-Crie uma relação da quantidade, perfil de usuários de seu projeto.
 
 \subsection{Aplicativos}
 Os usuários utilizam basicamente o aplicativo de RDP em seus computadores. No caso do micro da balança, possui um software específico que faz a captura do peso da mesma.
-Crie uma relação dos aplicativos e seus níveis críticos de uso.
-
 
 \section{Estrutura predial existente}
 
-Explique aqui a planta física dos prédios
-Pode ser anexada, em escala ou não.
+A unidade é composta por 4 prédios: escritório, guarita, armazém e moegas.
 
-Deve conter uma descrição geral, indicando a possível distância entre os pontos de rede e restrições de instalação.
+A Figura\ref{fig1} representa a planta do escritório. 
+
+A Figura\ref{fig2} representa o layout do patio da Unidade, com a previsão de interligação com dutos subterrâneos para passagem de fibra óptica.
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{fig1}
+	\caption{Layout Escritório}
+	\label{fig1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{fig2}
+	\caption{Layout Pátio}
+	\label{fig2}
+\end{figure}
 
 \section{Planta Lógica - Elementos estruturados}
 
 \subsection{Estado atual}
-Deve ter a planta atual, se for o caso
+A planta atual não possui pontos de rede para atender todos os terminais da maneira com estão dispostos
 
 \subsection{Topologia}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{fig3}
+	\caption{Layout Escritório}
+	\label{fig3}
+\end{figure}
+
 Proposta futura, proposta após implantação.
 Deve conter o diagrama da rede. Atente-se a redundância  e ligações truncadas.
 Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc..
@@ -230,19 +216,45 @@ Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo:
 Todos os elementos das figuras devem ser explicados. 
 Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma tabela contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
 
-\input{tab1}
+%%\input{tab1}
 
 \subsection{Encaminhamento}
-Eletrodutos, calhas, e qualquer material em que os cabos serão alojados/alocados.
+Os cabos serão passados dentro de eletrodutos e perfilados. 
 
 \subsection{Memorial descritivo}
-
-Relacione todos os equipamentos passivos que serão utilizados, tipo, fabricante, quantidade.
+Materiais que serão utilizados:
+\begin{itemize}
+	\item 2 patch panels Standard Furukawa
+	\item 1 Rack 16U Attic
+	\item 3 Racks 6U Attic
+	\item 32 conectores RJ45 Fêmea Standard Furukawa
+	\item 960m de cabo de rede CM Furukawa Cat.5e
+	\item 6 guias de cabo
+	\item 4 réguas de tomadas para rack
+	\item 4 bandejas para rack
+	\item 27 patch cords 1,5m Furukawa Cat.5e
+	\item 32 patch cords 2,5m Furukawa Cat.5e
+\end{itemize}
 
 \subsection{Identificação dos cabos}
+Serão utilizado cabos Furukawa CM categoria 5e. Não ha necessidade de comunicação Gigabit localmente.
 
 \section{Implantação}
-Estabeleça um cronograma de implantação:
+
+Cronograma de implantação:
+\begin{itemize}
+	\item Instalação dos eletrodutos e conduletes
+	\item Passagem dos cabos de rede pela infra estrutura
+	\item Passagem da fibra óptica entre os prédios
+	\item Instalação dos novos racks
+	\item Crimpagem dos cabos no racks e nos pontos
+	\item Identificação dos pontos lógicos e uplinks de fibra óptica
+	\item Mudança dos equipamentos onde chega o link de internet da Unidade para o novo Rack do escritório e instalação dos patch cords nos novos pontos de rede, ligando nos dispositivos a fins. (Esta etapa será executada fora do horário de expediente, para não impactar no atendimento ao público na Unidade, pois haverá interrupção no acesso ao sistema)
+	\item Remoção do rack atual
+	\item Remoção dos rádios que fazem alguns uplinks nos prédios do local.
+\end{itemize}
+Todo o serviço será realizado por uma empresa terceira. Previsão de 12 dias para execução do projeto.
+
 Remoção de equipamentos existentes (destino para descarte), instalação dos condutores, instalação dos cabos, 
 identificação dos cabos, montagem dos racks, certificação, etc... Crie atividades e estabeleça o tempo de execução. Se for um projeto real, indique também quais os responsáveis pela execução do projeto e de cada uma das etapas.
 
@@ -256,58 +268,48 @@ https://trello.com/,
 http://www.ganttproject.biz/, 
 http://www.orangescrum.org/. 
 
-\section{Plano de certificação}
-Quais seriam as etapas para a certificação? 
-Quais os locais e horários para execução da certificação na rede? Toda rede será certificada?
-Como os testes seriam executados?
-Quais relatórios de certificação serão (ou deveriam ser) entregues? 
+%%\section{Plano de certificação}
+%%Quais seriam as etapas para a certificação? 
+%%Quais os locais e horários para execução da certificação na rede? Toda rede será certificada?
+%%Como os testes seriam executados?
+%%Quais relatórios de certificação serão (ou deveriam ser) entregues? 
 
-\section{Plano de manutenção}
+%%\section{Plano de manutenção}
 
-Revisões periódicas na rede, emissão de certificados para novos pontos.
+Re%%visões periódicas na rede, emissão de certificados para novos pontos.
 
 \subsection{Plano de expansão}
-Existe um plano de expansão? Quantos novos pontos poderão ser acrecidos na rede, antes de migração de equipamentos na camada 2? Se houver expansão, quais equipamentos deverão ser direcionados para as estremidades da rede? 
-
+Todos os locais terão portas de rede sobrando nos switches e patch panel, onde houver, para necessidade de expansão futura. Caso haja necessidade, também haverá espaço nos racks para instalação de mais passivos e ativos.
 
 \section{Orçamento}
-Crie uma relação de orçamentos baseado na seções anteriores.
-
-\section{Referências bibliográficas}
-Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.
-
-Exemplo: Redes de computadores, segundo \cite{t2013} é considerada..... Já \cite{kurose2010} apresenta uma versão...
-
-Analisando os pressupostos de \cite{ref3} e \cite{ref4} concluimos que....
+Fornecedor 1: 15 mil reais de material e 10 mil reais de mão de obra.
 
 
-\renewcommand\refname{} %%Referências bibliográficas}  
-\bibliographystyle{ieeetr}
-\bibliography{referencias}  
+Fornecedor 2: 15 mil reais de material e 9 mil reais de mão de obra.
+
+%%\section{Referências bibliográficas}
+%%Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.Exemplo: Redes de computadores, segundo \cite{t2013} é considerada..... Já \cite{kurose2010} apresenta uma versão...Analisando os pressupostos de \cite{ref3} e \cite{ref4} concluimos que....
+
+
+%%\renewcommand\refname{} %%Referências bibliográficas}  
+%%\bibliographystyle{ieeetr}
+%%\bibliography{referencias}  
 
 %% ***********************************************************************
 %% === remover daqui =====================================================
 %% ***********************************************************************
 
 \section{Elementos textuais - Alguns exemplos}
-
 Esta seção apresenta exemplos de elementos textuais. \textbf{Remova-a da versão final do texto}.
-
-
 \subsection{Colocar elementos em itens}
-
 Texto antes da lista
-
 \begin{itemize}
 	\item First item in a list 
 	\item Second item in a list 
 	\item Third item in a list
 \end{itemize}
-
 \subsubsection{Uma sub seçao de terceiro nivel}
-
 Exemplo de uma subseção
-
 \subsection{Tabelas}
 
 Utilize o site http://www.tablesgenerator.com/ para elaborar as tabelas de seu trabalho.
@@ -327,29 +329,14 @@ As figuras podem ser no formato PDF, JPG, PNG. Você pode referenciá-las da mes
 
 Não se preocupe o local em que a figura será renderizada em seu texto. Preocupe-se em criar referência para ela, ou seja, toda figura e tabela deve conter pelo menos uma referência no texto.
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{fig1}
-\caption{Exemplo de figura com escala horizontal}
-\label{fig1}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-	\includegraphics[]{fig2}
-	\caption{Exemplo de figura sem escala}
-	\label{fig2}
-\end{figure}
-
 Você pode rotacionar figuras também. Para isso utilize o parâmetro angle=-90. Repare que a escala da figura foi modificada pelo parametro height. Você também pode utilizar scale
 
-\begin{figure}
-	\centering
-	\includegraphics[height=\textwidth,angle=-90]{fig3}
-	\caption{Exemplo de figura rotacionada}
-	\label{fig3}
-\end{figure}
+%%\begin{figure}
+%%	\centering
+%%	\includegraphics[height=\textwidth,angle=-90]{fig3}
+%%	\caption{Exemplo de figura rotacionada}
+%%	\label{fig3}
+%%\end{figure}
 
 
 %% ***********************************************************************
